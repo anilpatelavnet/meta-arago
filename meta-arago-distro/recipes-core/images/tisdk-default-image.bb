@@ -75,3 +75,6 @@ IMAGE_INSTALL += "\
     ${@bb.utils.contains('TUNE_FEATURES', 'armv7a', 'valgrind', '', d)} \
     docker \
 "
+
+# Also include the Qt5 SDK into the final SDK generated with '-c populate_sdk' for this image
+inherit populate_sdk_qt5
